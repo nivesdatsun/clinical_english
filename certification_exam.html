@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pegasus One — C1 Clinical English Certification Exam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-900: #0a192f;
+      --navy-800: #102a43;
+      --navy-700: #1e3a8a;
+      --blue-600: #2563eb;
+      --blue-500: #3b82f6;
+      --blue-100: #dbeafe;
+      --gold-600: #b45309;
+      --gold-500: #d97706;
+      --gold-400: #f59e0b;
+      --gold-100: #fef3c7;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --emerald-600: #059669;
+      --emerald-50: #ecfdf5;
+      --rose-600: #e11d48;
+      --rose-50: #fff1f2;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: var(--slate-800);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
+      color: white;
+      padding: 1.5rem 2rem;
+      border-bottom: 3px solid var(--gold-500);
+      box-shadow: var(--shadow-md);
+    }
+
+    .header-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand-svg {
+      width: 48px;
+      height: 48px;
+    }
+
+    .brand-text h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.08em;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .brand-text p {
+      font-size: 0.85rem;
+      color: var(--gold-400);
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .candidate-pill {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Main Container */
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      flex: 1;
+      width: 100%;
+    }
+
+    /* Candidate Registration Banner */
+    .reg-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .reg-card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      color: var(--navy-800);
+      margin-bottom: 0.5rem;
+    }
+
+    .reg-card p {
+      font-size: 0.92rem;
+      color: var(--slate-600);
+      margin-bottom: 1.25rem;
+    }
+
+    .reg-form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      align-items: flex-end;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--slate-700);
+      margin-bottom: 0.35rem;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid var(--slate-300);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--blue-500);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+
+    /* Progress & Metric Header */
+    .metric-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .metric-card {
+      background: white;
+      padding: 1.25rem;
+      border-radius: 10px;
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
+
+    .metric-val {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--navy-800);
+      font-family: 'Cinzel', serif;
+    }
+
+    .metric-lbl {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--slate-500);
+      font-weight: 600;
+      margin-top: 0.25rem;
+    }
+
+    .progress-bar-container {
+      background: var(--slate-200);
+      height: 8px;
+      border-radius: 9999px;
+      margin-top: 0.5rem;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      background: linear-gradient(90deg, var(--blue-600), var(--gold-500));
+      height: 100%;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    /* Section Tabs */
+    .tab-nav {
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--slate-200);
+    }
+
+    .tab-btn {
+      background: white;
+      border: 1px solid var(--slate-200);
+      padding: 0.65rem 1.15rem;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--slate-600);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .tab-btn:hover {
+      background: var(--slate-100);
+      color: var(--navy-800);
+    }
+
+    .tab-btn.active {
+      background: var(--navy-800);
+      color: white;
+      border-color: var(--navy-800);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .tab-btn .badge-count {
+      font-size: 0.75rem;
+      background: rgba(0, 0, 0, 0.08);
+      padding: 0.15rem 0.45rem;
+      border-radius: 9999px;
+    }
+
+    .tab-btn.active .badge-count {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Quiz Section Card */
+    .section-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-sm);
+      display: none;
+    }
+
+    .section-card.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-header {
+      margin-bottom: 1.75rem;
+      border-bottom: 1px solid var(--slate-200);
+      padding-bottom: 1rem;
+    }
+
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      color: var(--navy-900);
+      margin-bottom: 0.35rem;
+    }
+
+    .section-header p {
+      color: var(--slate-600);
+      font-size: 0.95rem;
+    }
+
+    /* Question Box */
+    .q-item {
+      padding: 1.5rem;
+      border-radius: 10px;
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      margin-bottom: 1.5rem;
+      transition: all 0.2s;
+    }
+
+    .q-item:hover {
+      border-color: var(--blue-500);
+      background: white;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .q-title {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--navy-800);
+      margin-bottom: 0.85rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .q-num {
+      color: var(--gold-600);
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+    }
+
+    .q-prompt {
+      font-size: 0.95rem;
+      color: var(--slate-700);
+      margin-bottom: 1rem;
+    }
+
+    /* Options */
+    .opt-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .opt-label {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.65rem 1rem;
+      background: white;
+      border: 1px solid var(--slate-200);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.92rem;
+      transition: all 0.15s;
+    }
+
+    .opt-label:hover {
+      background: var(--blue-100);
+      border-color: var(--blue-500);
+    }
+
+    .opt-label input[type="radio"] {
+      accent-color: var(--blue-600);
+      transform: scale(1.1);
+    }
+
+    .opt-label.selected {
+      border-color: var(--blue-600);
+      background: rgba(37, 99, 235, 0.06);
+      font-weight: 500;
+    }
+
+    /* Text Input Questions */
+    .text-input-wrap {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    .text-input-wrap input {
+      flex: 1;
+      max-width: 320px;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid var(--slate-300);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .root-word-tag {
+      display: inline-block;
+      background: var(--gold-100);
+      color: var(--gold-600);
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      border: 1px solid rgba(217, 119, 6, 0.3);
+    }
+
+    /* Audio Player Widget */
+    .audio-player-card {
+      background: white;
+      border: 1px solid var(--slate-200);
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-play-audio {
+      background: var(--navy-800);
+      color: white;
+      border: none;
+      padding: 0.55rem 1.15rem;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: background 0.2s;
+    }
+
+    .btn-play-audio:hover {
+      background: var(--blue-600);
+    }
+
+    .audio-speed-btn {
+      background: var(--slate-100);
+      border: 1px solid var(--slate-200);
+      color: var(--slate-700);
+      padding: 0.45rem 0.75rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .audio-speed-btn.active {
+      background: var(--slate-800);
+      color: white;
+      border-color: var(--slate-800);
+    }
+
+    .audio-wave {
+      display: inline-flex;
+      gap: 3px;
+      align-items: center;
+      height: 16px;
+    }
+
+    .audio-wave span {
+      width: 3px;
+      height: 6px;
+      background: var(--blue-500);
+      border-radius: 2px;
+      transition: height 0.2s;
+    }
+
+    .speaking .audio-wave span:nth-child(1) { animation: wave 0.8s infinite 0.1s; }
+    .speaking .audio-wave span:nth-child(2) { animation: wave 0.8s infinite 0.3s; }
+    .speaking .audio-wave span:nth-child(3) { animation: wave 0.8s infinite 0.2s; }
+    .speaking .audio-wave span:nth-child(4) { animation: wave 0.8s infinite 0.4s; }
+
+    @keyframes wave {
+      0%, 100% { height: 4px; }
+      50% { height: 16px; }
+    }
+
+    .hidden-transcript {
+      margin-top: 0.5rem;
+      font-size: 0.88rem;
+      color: var(--slate-600);
+      font-style: italic;
+      background: var(--slate-100);
+      padding: 0.65rem 0.85rem;
+      border-radius: 4px;
+      border-left: 3px solid var(--blue-500);
+      display: none;
+    }
+
+    /* Question Feedback Banner */
+    .q-feedback {
+      margin-top: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      display: none;
+    }
+
+    .q-feedback.correct {
+      background: var(--emerald-50);
+      border: 1px solid rgba(5, 150, 105, 0.3);
+      color: #065f46;
+      display: block;
+    }
+
+    .q-feedback.incorrect {
+      background: var(--rose-50);
+      border: 1px solid rgba(225, 29, 72, 0.3);
+      color: #9f1239;
+      display: block;
+    }
+
+    /* Action Buttons */
+    .actions-strip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--slate-200);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn-secondary {
+      background: white;
+      border: 1px solid var(--slate-300);
+      color: var(--slate-700);
+      padding: 0.65rem 1.25rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: var(--slate-100);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--navy-800) 0%, var(--navy-700) 100%);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--navy-700) 0%, var(--blue-600) 100%);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-1px);
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-600) 0%, var(--gold-500) 100%);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.75rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+      transition: all 0.2s;
+    }
+
+    .btn-gold:hover {
+      background: linear-gradient(135deg, var(--gold-500) 0%, var(--gold-400) 100%);
+      transform: translateY(-1px);
+    }
+
+    /* Results & Certificate Container */
+    #results-view {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .results-hero {
+      background: white;
+      border-radius: 12px;
+      padding: 2.5rem;
+      text-align: center;
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-md);
+      margin-bottom: 2rem;
+    }
+
+    .score-circle {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: var(--navy-900);
+      color: var(--gold-400);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 1.5rem;
+      border: 4px solid var(--gold-500);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .score-circle .pct {
+      font-size: 2.25rem;
+      font-weight: 800;
+      font-family: 'Cinzel', serif;
+    }
+
+    .score-circle .pts {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: white;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 0.4rem 1.25rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .status-badge.pass {
+      background: var(--emerald-50);
+      color: var(--emerald-600);
+      border: 1px solid rgba(5, 150, 105, 0.4);
+    }
+
+    .status-badge.retry {
+      background: var(--gold-100);
+      color: var(--gold-600);
+      border: 1px solid rgba(217, 119, 6, 0.4);
+    }
+
+    /* THE OFFICIAL CERTIFICATE */
+    .cert-wrapper {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-xl);
+      border-radius: 4px;
+    }
+
+    .certificate {
+      border: 6px solid var(--navy-900);
+      padding: 2.5rem;
+      position: relative;
+      background: #fffdfa;
+      outline: 2px solid var(--gold-500);
+      outline-offset: -12px;
+      text-align: center;
+    }
+
+    .cert-corner-decor {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-color: var(--gold-500);
+      border-style: solid;
+    }
+    .cert-tl { top: 16px; left: 16px; border-width: 3px 0 0 3px; }
+    .cert-tr { top: 16px; right: 16px; border-width: 3px 3px 0 0; }
+    .cert-bl { bottom: 16px; left: 16px; border-width: 0 0 3px 3px; }
+    .cert-br { bottom: 16px; right: 16px; border-width: 0 3px 3px 0; }
+
+    .cert-logo {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 1rem;
+    }
+
+    .cert-institution {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      letter-spacing: 0.15em;
+      color: var(--gold-600);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .cert-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.25rem;
+      color: var(--navy-900);
+      font-weight: 700;
+      margin: 0.5rem 0 1.25rem;
+      letter-spacing: 0.02em;
+    }
+
+    .cert-certifies {
+      font-size: 0.95rem;
+      color: var(--slate-600);
+      font-style: italic;
+      margin-bottom: 0.75rem;
+    }
+
+    .cert-recipient {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.15rem;
+      color: var(--navy-800);
+      font-weight: 700;
+      border-bottom: 2px solid var(--gold-500);
+      display: inline-block;
+      padding: 0 2rem 0.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .cert-text {
+      max-width: 650px;
+      margin: 0 auto 2rem;
+      font-size: 0.95rem;
+      color: var(--slate-700);
+      line-height: 1.7;
+    }
+
+    .cert-badges-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: flex-end;
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px dashed var(--slate-300);
+    }
+
+    .cert-sig-block {
+      text-align: center;
+    }
+
+    .cert-signature-line {
+      width: 180px;
+      border-bottom: 1px solid var(--slate-700);
+      margin: 0 auto 0.4rem;
+      font-family: 'Playfair Display', cursive;
+      font-style: italic;
+      font-size: 1.3rem;
+      color: var(--navy-900);
+    }
+
+    .cert-sig-title {
+      font-size: 0.75rem;
+      color: var(--slate-500);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+
+    .cert-seal-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cert-gold-seal {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #fde047 0%, #d97706 70%, #92400e 100%);
+      box-shadow: 0 4px 10px rgba(180, 83, 9, 0.35);
+      border: 3px dashed #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #451a03;
+      text-align: center;
+      padding: 4px;
+    }
+
+    .cert-gold-seal .seal-star {
+      font-size: 0.9rem;
+      color: #78350f;
+    }
+
+    .cert-gold-seal .seal-txt {
+      font-size: 0.62rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+    }
+
+    .cert-gold-seal .seal-year {
+      font-size: 0.68rem;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    /* Print Stylesheet for Certificate */
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      header, .reg-card, .metric-strip, .tab-nav, .section-card, .actions-strip, .results-hero, .btn-gold, .btn-secondary, footer {
+        display: none !important;
+      }
+      .cert-wrapper, .cert-wrapper * {
+        visibility: visible;
+      }
+      .cert-wrapper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+      .certificate {
+        border-width: 4px;
+      }
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy-900);
+      color: var(--slate-400);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: auto;
+    }
+
+    footer p strong {
+      color: var(--gold-400);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="brand">
+        <!-- Pegasus One Vector Crest -->
+        <svg class="brand-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="30" fill="#102A43" stroke="#D97706" stroke-width="2.5"/>
+          <path d="M18 42C24 40 28 34 32 26C34 22 38 18 44 16C41 22 38 28 37 34C36 40 40 44 46 44C38 46 30 45 24 43" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 28C26 26 30 24 35 25" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="32" cy="32" r="28" stroke="white" stroke-opacity="0.15" stroke-dasharray="3 3"/>
+        </svg>
+        <div class="brand-text">
+          <h1>Pegasus One</h1>
+          <p>Language Learning Centre • C1 Clinical Certification</p>
+        </div>
+      </div>
+      <div class="candidate-pill">
+        <span>Candidate:</span>
+        <strong id="display-candidate-name">Doctor</strong>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main>
+
+    <!-- Candidate Registration Banner -->
+    <div class="reg-card" id="registration-card">
+      <h2>Candidate Profile & Certification Details</h2>
+      <p>Please enter your professional details. Your full name will be dynamically inscribed on your official Pegasus One Certificate of Clinical Competence upon achieving the 80% passing standard.</p>
+      <div class="reg-form">
+        <div class="form-group">
+          <label for="input-fullname">Full Professional Name & Title</label>
+          <input type="text" id="input-fullname" placeholder="e.g. Dr Alex Taylor, D.O." value="Dr Alex Taylor, D.O.">
+        </div>
+        <div class="form-group">
+          <label for="input-email">Professional Email Address</label>
+          <input type="email" id="input-email" placeholder="e.g. doctor@clinicalpractice.com" value="clinician@example.com">
+        </div>
+        <div>
+          <button class="btn-primary" type="button" onclick="saveCandidateProfile()">Save Candidate Record</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Metric Strip -->
+    <div class="metric-strip">
+      <div class="metric-card">
+        <div class="metric-val" id="val-answered">0 / 30</div>
+        <div class="metric-lbl">Questions Completed</div>
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill" id="bar-progress"></div>
+        </div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val" id="val-current-score">0%</div>
+        <div class="metric-lbl">Current Pass Level (Target: 80%)</div>
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill" id="bar-score" style="background: var(--gold-500);"></div>
+        </div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val" id="val-status">IN PROGRESS</div>
+        <div class="metric-lbl">Certification Status</div>
+      </div>
+    </div>
+
+    <!-- Section Navigation Tabs -->
+    <div class="tab-nav">
+      <button class="tab-btn active" onclick="switchSection(1)">
+        <span>1. Word Shifts</span>
+        <span class="badge-count" id="badge-sec-1">0/5</span>
+      </button>
+      <button class="tab-btn" onclick="switchSection(2)">
+        <span>2. TO vs FOR</span>
+        <span class="badge-count" id="badge-sec-2">0/5</span>
+      </button>
+      <button class="tab-btn" onclick="switchSection(3)">
+        <span>3. Phrasal Verbs</span>
+        <span class="badge-count" id="badge-sec-3">0/5</span>
+      </button>
+      <button class="tab-btn" onclick="switchSection(4)">
+        <span>4. TART Diagnostics</span>
+        <span class="badge-count" id="badge-sec-4">0/5</span>
+      </button>
+      <button class="tab-btn" onclick="switchSection(5)">
+        <span>5. Register Polish</span>
+        <span class="badge-count" id="badge-sec-5">0/5</span>
+      </button>
+      <button class="tab-btn" onclick="switchSection(6)">
+        <span>6. Audio & Mentorship</span>
+        <span class="badge-count" id="badge-sec-6">0/5</span>
+      </button>
+    </div>
+
+    <!-- ==================== SECTION 1: WORD FORMATION ==================== -->
+    <div class="section-card active" id="sec-1">
+      <div class="section-header">
+        <h2>Section 1: C1 Word Formation & Morphological Shifts</h2>
+        <p>Complete each clinical statement by transforming the given root word into the appropriate morphological form (noun, adjective, adverb, or past participle).</p>
+      </div>
+
+      <!-- Q1 -->
+      <div class="q-item" id="q-1">
+        <div class="q-title"><span class="q-num">1.</span> <span>Neuromuscular Reflex Pathway</span></div>
+        <div class="q-prompt">
+          Submaximal isometric contraction stimulates Golgi tendon organs, inducing immediate post-isometric neuromuscular <span class="root-word-tag">COMPLY</span>.
+        </div>
+        <div class="text-input-wrap">
+          <input type="text" id="ans-1" placeholder="Type transformed word..." onblur="checkAnswer(1)">
+          <button class="btn-secondary" onclick="checkAnswer(1)">Submit</button>
+        </div>
+        <div class="q-feedback" id="fb-1"></div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="q-item" id="q-2">
+        <div class="q-title"><span class="q-num">2.</span> <span>Joint Motion Boundaries</span></div>
+        <div class="q-prompt">
+          The clinician gently advances the cervical articulation until a distinct <span class="root-word-tag">RESTRICT</span> barrier is palpated.
+        </div>
+        <div class="text-input-wrap">
+          <input type="text" id="ans-2" placeholder="Type transformed word..." onblur="checkAnswer(2)">
+          <button class="btn-secondary" onclick="checkAnswer(2)">Submit</button>
+        </div>
+        <div class="q-feedback" id="fb-2"></div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="q-item" id="q-3">
+        <div class="q-title"><span class="q-num">3.</span> <span>Patient Modality Selection</span></div>
+        <div class="q-prompt">
+          Direct high-velocity articular thrusts were poorly <span class="root-word-tag">TOLERATE</span> by the frail elderly patient, necessitating gentle Muscle Energy Technique instead.
+        </div>
+        <div class="text-input-wrap">
+          <input type="text" id="ans-3" placeholder="Type transformed word..." onblur="checkAnswer(3)">
+          <button class="btn-secondary" onclick="checkAnswer(3)">Submit</button>
+        </div>
+        <div class="q-feedback" id="fb-3"></div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="q-item" id="q-4">
+        <div class="q-title"><span class="q-num">4.</span> <span>Spinal Neurophysiology</span></div>
+        <div class="q-prompt">
+          Persistent paraspinal hypertonicity can precipitate chronic segmental <span class="root-word-tag">FACILITATE</span>, lowering the sensory threshold of spinal cord interneurons.
+        </div>
+        <div class="text-input-wrap">
+          <input type="text" id="ans-4" placeholder="Type transformed word..." onblur="checkAnswer(4)">
+          <button class="btn-secondary" onclick="checkAnswer(4)">Submit</button>
+        </div>
+        <div class="q-feedback" id="fb-4"></div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="q-item" id="q-5">
+        <div class="q-title"><span class="q-num">5.</span> <span>Myofascial Plasticity</span></div>
+        <div class="q-prompt">
+          Sustained low-load pressure induces viscoelastic creep and permanent plastic <span class="root-word-tag">DEFORM</span> within the restricted collagenous matrix.
+        </div>
+        <div class="text-input-wrap">
+          <input type="text" id="ans-5" placeholder="Type transformed word..." onblur="checkAnswer(5)">
+          <button class="btn-secondary" onclick="checkAnswer(5)">Submit</button>
+        </div>
+        <div class="q-feedback" id="fb-5"></div>
+      </div>
+
+      <div class="actions-strip">
+        <span></span>
+        <button class="btn-primary" onclick="switchSection(2)">Proceed to Section 2: TO vs FOR →</button>
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 2: TO vs FOR ==================== -->
+    <div class="section-card" id="sec-2">
+      <div class="section-header">
+        <h2>Section 2: The "TO vs FOR" Preposition Gauntlet</h2>
+        <p>Mastering purpose clauses versus functional categories. Remember: use <strong>TO + base verb</strong> to state intentional clinical purpose; use <strong>FOR + noun / gerund</strong> for general purpose categories.</p>
+      </div>
+
+      <!-- Q6 -->
+      <div class="q-item" id="q-6">
+        <div class="q-title"><span class="q-num">6.</span> <span>Clinical Intention & Modality Purpose</span></div>
+        <div class="q-prompt">We implement Muscle Energy Technique ________ articular compliance without introducing joint trauma.</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-6" value="A" onchange="checkAnswer(6)"> <span>to restore</span></label>
+          <label class="opt-label"><input type="radio" name="opt-6" value="B" onchange="checkAnswer(6)"> <span>for restore</span></label>
+          <label class="opt-label"><input type="radio" name="opt-6" value="C" onchange="checkAnswer(6)"> <span>for to restore</span></label>
+          <label class="opt-label"><input type="radio" name="opt-6" value="D" onchange="checkAnswer(6)"> <span>for restoring of</span></label>
+        </div>
+        <div class="q-feedback" id="fb-6"></div>
+      </div>
+
+      <!-- Q7 -->
+      <div class="q-item" id="q-7">
+        <div class="q-title"><span class="q-num">7.</span> <span>Diagnostic Category Formulation</span></div>
+        <div class="q-prompt">This comprehensive palpatory evaluation is clinically indicated ________.</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-7" value="A" onchange="checkAnswer(7)"> <span>to diagnostic purposes</span></label>
+          <label class="opt-label"><input type="radio" name="opt-7" value="B" onchange="checkAnswer(7)"> <span>for diagnostic purposes</span></label>
+          <label class="opt-label"><input type="radio" name="opt-7" value="C" onchange="checkAnswer(7)"> <span>for to diagnose</span></label>
+          <label class="opt-label"><input type="radio" name="opt-7" value="D" onchange="checkAnswer(7)"> <span>for diagnose</span></label>
+        </div>
+        <div class="q-feedback" id="fb-7"></div>
+      </div>
+
+      <!-- Q8 -->
+      <div class="q-item" id="q-8">
+        <div class="q-title"><span class="q-num">8.</span> <span>Hands-on Restrictive Engagement</span></div>
+        <div class="q-prompt">The practitioner cradles the occiput ________ the suboccipital restrictive barrier.</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-8" value="A" onchange="checkAnswer(8)"> <span>for engage</span></label>
+          <label class="opt-label"><input type="radio" name="opt-8" value="B" onchange="checkAnswer(8)"> <span>to engage</span></label>
+          <label class="opt-label"><input type="radio" name="opt-8" value="C" onchange="checkAnswer(8)"> <span>to engaging</span></label>
+          <label class="opt-label"><input type="radio" name="opt-8" value="D" onchange="checkAnswer(8)"> <span>for to engage</span></label>
+        </div>
+        <div class="q-feedback" id="fb-8"></div>
+      </div>
+
+      <!-- Q9 -->
+      <div class="q-item" id="q-9">
+        <div class="q-title"><span class="q-num">9.</span> <span>Fascial Remodelling</span></div>
+        <div class="q-prompt">Passive stretching alone is insufficient ________ dense paraspinal adhesions.</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-9" value="A" onchange="checkAnswer(9)"> <span>for remodel</span></label>
+          <label class="opt-label"><input type="radio" name="opt-9" value="B" onchange="checkAnswer(9)"> <span>to remodel</span></label>
+          <label class="opt-label"><input type="radio" name="opt-9" value="C" onchange="checkAnswer(9)"> <span>for remodelling to</span></label>
+          <label class="opt-label"><input type="radio" name="opt-9" value="D" onchange="checkAnswer(9)"> <span>to remodelling</span></label>
+        </div>
+        <div class="q-feedback" id="fb-9"></div>
+      </div>
+
+      <!-- Q10 -->
+      <div class="q-item" id="q-10">
+        <div class="q-title"><span class="q-num">10.</span> <span>Instrument Function</span></div>
+        <div class="q-prompt">A clinical goniometer is an instrument specifically designed ________ joint range of motion.</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-10" value="A" onchange="checkAnswer(10)"> <span>for measuring</span></label>
+          <label class="opt-label"><input type="radio" name="opt-10" value="B" onchange="checkAnswer(10)"> <span>for measure</span></label>
+          <label class="opt-label"><input type="radio" name="opt-10" value="C" onchange="checkAnswer(10)"> <span>to measurement</span></label>
+          <label class="opt-label"><input type="radio" name="opt-10" value="D" onchange="checkAnswer(10)"> <span>to measuring</span></label>
+        </div>
+        <div class="q-feedback" id="fb-10"></div>
+      </div>
+
+      <div class="actions-strip">
+        <button class="btn-secondary" onclick="switchSection(1)">← Back to Section 1</button>
+        <button class="btn-primary" onclick="switchSection(3)">Proceed to Section 3: Phrasal Verbs →</button>
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 3: PHRASAL VERBS ==================== -->
+    <div class="section-card" id="sec-3">
+      <div class="section-header">
+        <h2>Section 3: Clinical Phrasal Verbs & Professional Collocations</h2>
+        <p>Select the idiomatic clinical phrasal verb that accurately completes each diagnostic and therapeutic statement.</p>
+      </div>
+
+      <!-- Q11 -->
+      <div class="q-item" id="q-11">
+        <div class="q-title"><span class="q-num">11.</span> <span>Differential Screening</span></div>
+        <div class="q-prompt">Before initiating a high-velocity cervical manipulation, the clinician must ________ vascular red flags such as vertebral artery dissection.</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-11" value="A" onchange="checkAnswer(11)"> <span>rule out</span></label>
+          <label class="opt-label"><input type="radio" name="opt-11" value="B" onchange="checkAnswer(11)"> <span>rule in</span></label>
+          <label class="opt-label"><input type="radio" name="opt-11" value="C" onchange="checkAnswer(11)"> <span>back out</span></label>
+          <label class="opt-label"><input type="radio" name="opt-11" value="D" onchange="checkAnswer(11)"> <span>wind down</span></label>
+        </div>
+        <div class="q-feedback" id="fb-11"></div>
+      </div>
+
+      <!-- Q12 -->
+      <div class="q-item" id="q-12">
+        <div class="q-title"><span class="q-num">12.</span> <span>Aetiology & Origin</span></div>
+        <div class="q-prompt">The patient's chronic cervicogenic headaches ________ unaddressed postural strain and suboccipital hypertonicity.</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-12" value="A" onchange="checkAnswer(12)"> <span>stem from</span></label>
+          <label class="opt-label"><input type="radio" name="opt-12" value="B" onchange="checkAnswer(12)"> <span>stem off</span></label>
+          <label class="opt-label"><input type="radio" name="opt-12" value="C" onchange="checkAnswer(12)"> <span>hold back</span></label>
+          <label class="opt-label"><input type="radio" name="opt-12" value="D" onchange="checkAnswer(12)"> <span>set out</span></label>
+        </div>
+        <div class="q-feedback" id="fb-12"></div>
+      </div>
+
+      <!-- Q13 -->
+      <div class="q-item" id="q-13">
+        <div class="q-title"><span class="q-num">13.</span> <span>Acute Exacerbation</span></div>
+        <div class="q-prompt">Lifting heavy furniture over the weekend caused the patient's acute lumbar radiculopathy to ________.</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-13" value="A" onchange="checkAnswer(13)"> <span>flare up</span></label>
+          <label class="opt-label"><input type="radio" name="opt-13" value="B" onchange="checkAnswer(13)"> <span>flare out</span></label>
+          <label class="opt-label"><input type="radio" name="opt-13" value="C" onchange="checkAnswer(13)"> <span>blow over</span></label>
+          <label class="opt-label"><input type="radio" name="opt-13" value="D" onchange="checkAnswer(13)"> <span>break in</span></label>
+        </div>
+        <div class="q-feedback" id="fb-13"></div>
+      </div>
+
+      <!-- Q14 -->
+      <div class="q-item" id="q-14">
+        <div class="q-title"><span class="q-num">14.</span> <span>Barrier Engagement Dosage</span></div>
+        <div class="q-prompt">During the post-isometric relaxation phase, gently ________ to engage the new restrictive barrier without forcing.</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-14" value="A" onchange="checkAnswer(14)"> <span>take up the slack</span></label>
+          <label class="opt-label"><input type="radio" name="opt-14" value="B" onchange="checkAnswer(14)"> <span>take in the slack</span></label>
+          <label class="opt-label"><input type="radio" name="opt-14" value="C" onchange="checkAnswer(14)"> <span>let down the barrier</span></label>
+          <label class="opt-label"><input type="radio" name="opt-14" value="D" onchange="checkAnswer(14)"> <span>put off the tension</span></label>
+        </div>
+        <div class="q-feedback" id="fb-14"></div>
+      </div>
+
+      <!-- Q15 -->
+      <div class="q-item" id="q-15">
+        <div class="q-title"><span class="q-num">15.</span> <span>Clinical Procedure Execution</span></div>
+        <div class="q-prompt">It is standard protocol to ________ a bilateral TART palpation protocol prior to initiating manual mobilisation.</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-15" value="A" onchange="checkAnswer(15)"> <span>carry out</span></label>
+          <label class="opt-label"><input type="radio" name="opt-15" value="B" onchange="checkAnswer(15)"> <span>carry over</span></label>
+          <label class="opt-label"><input type="radio" name="opt-15" value="C" onchange="checkAnswer(15)"> <span>bring around</span></label>
+          <label class="opt-label"><input type="radio" name="opt-15" value="D" onchange="checkAnswer(15)"> <span>take through</span></label>
+        </div>
+        <div class="q-feedback" id="fb-15"></div>
+      </div>
+
+      <div class="actions-strip">
+        <button class="btn-secondary" onclick="switchSection(2)">← Back to Section 2</button>
+        <button class="btn-primary" onclick="switchSection(4)">Proceed to Section 4: TART Diagnostics →</button>
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 4: TART DIAGNOSTICS ==================== -->
+    <div class="section-card" id="sec-4">
+      <div class="section-header">
+        <h2>Section 4: Diagnostic Frameworks & TART Tactile Lexis</h2>
+        <p>Testing your command of osteopathic diagnostic criteria, palpatory tissue descriptors, and physiological joint boundaries.</p>
+      </div>
+
+      <!-- Q16 -->
+      <div class="q-item" id="q-16">
+        <div class="q-title"><span class="q-num">16.</span> <span>The TART Acronym</span></div>
+        <div class="q-prompt">In the standard osteopathic diagnostic framework TART, what does the letter 'R' signify?</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-16" value="A" onchange="checkAnswer(16)"> <span>Restriction of motion</span></label>
+          <label class="opt-label"><input type="radio" name="opt-16" value="B" onchange="checkAnswer(16)"> <span>Range of movement</span></label>
+          <label class="opt-label"><input type="radio" name="opt-16" value="C" onchange="checkAnswer(16)"> <span>Reciprocal reaction</span></label>
+          <label class="opt-label"><input type="radio" name="opt-16" value="D" onchange="checkAnswer(16)"> <span>Rotational release</span></label>
+        </div>
+        <div class="q-feedback" id="fb-16"></div>
+      </div>
+
+      <!-- Q17 -->
+      <div class="q-item" id="q-17">
+        <div class="q-title"><span class="q-num">17.</span> <span>Acute Tactile Texture</span></div>
+        <div class="q-prompt">Upon palpating paraspinal musculature following an acute injury, the clinician detects a soft, fluid-congested, spongy sensation. This tactile end-feel is termed:</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-17" value="A" onchange="checkAnswer(17)"> <span>boggy</span></label>
+          <label class="opt-label"><input type="radio" name="opt-17" value="B" onchange="checkAnswer(17)"> <span>fibrotic</span></label>
+          <label class="opt-label"><input type="radio" name="opt-17" value="C" onchange="checkAnswer(17)"> <span>lax</span></label>
+          <label class="opt-label"><input type="radio" name="opt-17" value="D" onchange="checkAnswer(17)"> <span>leathery</span></label>
+        </div>
+        <div class="q-feedback" id="fb-17"></div>
+      </div>
+
+      <!-- Q18 -->
+      <div class="q-item" id="q-18">
+        <div class="q-title"><span class="q-num">18.</span> <span>Chronic Palpation Findings</span></div>
+        <div class="q-prompt">In chronic somatic dysfunctions, prolonged ischaemia and tissue breakdown cause paraspinal tissues to feel characteristically:</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-18" value="A" onchange="checkAnswer(18)"> <span>cool, dense, and fibrotic</span></label>
+          <label class="opt-label"><input type="radio" name="opt-18" value="B" onchange="checkAnswer(18)"> <span>warm, wet, and boggy</span></label>
+          <label class="opt-label"><input type="radio" name="opt-18" value="C" onchange="checkAnswer(18)"> <span>hypermobile and lax</span></label>
+          <label class="opt-label"><input type="radio" name="opt-18" value="D" onchange="checkAnswer(18)"> <span>fluid-filled and edematous</span></label>
+        </div>
+        <div class="q-feedback" id="fb-18"></div>
+      </div>
+
+      <!-- Q19 -->
+      <div class="q-item" id="q-19">
+        <div class="q-title"><span class="q-num">19.</span> <span>Structural Boundaries</span></div>
+        <div class="q-prompt">The absolute structural limit of passive joint motion governed by ligaments, capsules, and bones is the:</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-19" value="A" onchange="checkAnswer(19)"> <span>anatomical barrier</span></label>
+          <label class="opt-label"><input type="radio" name="opt-19" value="B" onchange="checkAnswer(19)"> <span>physiological barrier</span></label>
+          <label class="opt-label"><input type="radio" name="opt-19" value="C" onchange="checkAnswer(19)"> <span>restrictive barrier</span></label>
+          <label class="opt-label"><input type="radio" name="opt-19" value="D" onchange="checkAnswer(19)"> <span>elastic barrier</span></label>
+        </div>
+        <div class="q-feedback" id="fb-19"></div>
+      </div>
+
+      <!-- Q20 -->
+      <div class="q-item" id="q-20">
+        <div class="q-title"><span class="q-num">20.</span> <span>Dysfunctional Limitation</span></div>
+        <div class="q-prompt">An abnormal motion limitation that occurs within the normal physiological range of a joint is clinically identified as a:</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-20" value="A" onchange="checkAnswer(20)"> <span>restrictive (pathological) barrier</span></label>
+          <label class="opt-label"><input type="radio" name="opt-20" value="B" onchange="checkAnswer(20)"> <span>anatomical endpoint</span></label>
+          <label class="opt-label"><input type="radio" name="opt-20" value="C" onchange="checkAnswer(20)"> <span>physiological threshold</span></label>
+          <label class="opt-label"><input type="radio" name="opt-20" value="D" onchange="checkAnswer(20)"> <span>viscoelastic plateau</span></label>
+        </div>
+        <div class="q-feedback" id="fb-20"></div>
+      </div>
+
+      <div class="actions-strip">
+        <button class="btn-secondary" onclick="switchSection(3)">← Back to Section 3</button>
+        <button class="btn-primary" onclick="switchSection(5)">Proceed to Section 5: Register Polish →</button>
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 5: REGISTER POLISH ==================== -->
+    <div class="section-card" id="sec-5">
+      <div class="section-header">
+        <h2>Section 5: Register Upgrades — Colloquial vs C1 Clinical Authority</h2>
+        <p>Eradicate informal physical therapy jargon and Italian structural transfers in favour of institutional medical phrasing.</p>
+      </div>
+
+      <!-- Q21 -->
+      <div class="q-item" id="q-21">
+        <div class="q-title"><span class="q-num">21.</span> <span>Articular Mobilisation Register</span></div>
+        <div class="q-prompt">Select the professional C1 clinical equivalent for the colloquial description: <em>"to crack the joint"</em>.</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-21" value="A" onchange="checkAnswer(21)"> <span>to restore articular compliance without joint trauma</span></label>
+          <label class="opt-label"><input type="radio" name="opt-21" value="B" onchange="checkAnswer(21)"> <span>to force the joint into acoustic cavitation</span></label>
+          <label class="opt-label"><input type="radio" name="opt-21" value="C" onchange="checkAnswer(21)"> <span>to make the bone click</span></label>
+          <label class="opt-label"><input type="radio" name="opt-21" value="D" onchange="checkAnswer(21)"> <span>to snap the articulation</span></label>
+        </div>
+        <div class="q-feedback" id="fb-21"></div>
+      </div>
+
+      <!-- Q22 -->
+      <div class="q-item" id="q-22">
+        <div class="q-title"><span class="q-num">22.</span> <span>Barrier Engagement Register</span></div>
+        <div class="q-prompt">Select the professional C1 clinical equivalent for the colloquial phrase: <em>"to push or force the barrier"</em>.</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-22" value="A" onchange="checkAnswer(22)"> <span>to engage or challenge the restrictive barrier</span></label>
+          <label class="opt-label"><input type="radio" name="opt-22" value="B" onchange="checkAnswer(22)"> <span>to shove through tissue resistance</span></label>
+          <label class="opt-label"><input type="radio" name="opt-22" value="C" onchange="checkAnswer(22)"> <span>to press hard on the bone</span></label>
+          <label class="opt-label"><input type="radio" name="opt-22" value="D" onchange="checkAnswer(22)"> <span>to drive past anatomical end-feel</span></label>
+        </div>
+        <div class="q-feedback" id="fb-22"></div>
+      </div>
+
+      <!-- Q23 -->
+      <div class="q-item" id="q-23">
+        <div class="q-title"><span class="q-num">23.</span> <span>Neuromuscular Relaxation Register</span></div>
+        <div class="q-prompt">Select the professional C1 clinical equivalent for: <em>"to relax the tight muscle"</em>.</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-23" value="A" onchange="checkAnswer(23)"> <span>to induce neuromuscular compliance and reduce hypertonicity</span></label>
+          <label class="opt-label"><input type="radio" name="opt-23" value="B" onchange="checkAnswer(23)"> <span>to loosen up the meat</span></label>
+          <label class="opt-label"><input type="radio" name="opt-23" value="C" onchange="checkAnswer(23)"> <span>to soften the muscle belly</span></label>
+          <label class="opt-label"><input type="radio" name="opt-23" value="D" onchange="checkAnswer(23)"> <span>to calm down the tissue fibers</span></label>
+        </div>
+        <div class="q-feedback" id="fb-23"></div>
+      </div>
+
+      <!-- Q24 -->
+      <div class="q-item" id="q-24">
+        <div class="q-title"><span class="q-num">24.</span> <span>Central Nervous System Processing</span></div>
+        <div class="q-prompt">Select the professional C1 clinical equivalent for: <em>"to restart the nervous system"</em>.</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-24" value="A" onchange="checkAnswer(24)"> <span>to down-regulate and recalibrate central nervous system processing</span></label>
+          <label class="opt-label"><input type="radio" name="opt-24" value="B" onchange="checkAnswer(24)"> <span>to reboot the patient's brain circuits</span></label>
+          <label class="opt-label"><input type="radio" name="opt-24" value="C" onchange="checkAnswer(24)"> <span>to turn off the spinal cord</span></label>
+          <label class="opt-label"><input type="radio" name="opt-24" value="D" onchange="checkAnswer(24)"> <span>to reset the electric wiring</span></label>
+        </div>
+        <div class="q-feedback" id="fb-24"></div>
+      </div>
+
+      <!-- Q25 -->
+      <div class="q-item" id="q-25">
+        <div class="q-title"><span class="q-num">25.</span> <span>Comparative Adjective Accuracy</span></div>
+        <div class="q-prompt">Identify the grammatically correct comparative statement in professional medical discourse:</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-25" value="A" onchange="checkAnswer(25)"> <span>High-velocity manipulation recalibrates central processing faster than passive stretching.</span></label>
+          <label class="opt-label"><input type="radio" name="opt-25" value="B" onchange="checkAnswer(25)"> <span>High-velocity manipulation recalibrates central processing more fast than passive stretching.</span></label>
+          <label class="opt-label"><input type="radio" name="opt-25" value="C" onchange="checkAnswer(25)"> <span>High-velocity manipulation recalibrates central processing more faster than passive stretching.</span></label>
+          <label class="opt-label"><input type="radio" name="opt-25" value="D" onchange="checkAnswer(25)"> <span>High-velocity manipulation recalibrates central processing as fast as more stretching.</span></label>
+        </div>
+        <div class="q-feedback" id="fb-25"></div>
+      </div>
+
+      <div class="actions-strip">
+        <button class="btn-secondary" onclick="switchSection(4)">← Back to Section 4</button>
+        <button class="btn-primary" onclick="switchSection(6)">Proceed to Section 6: Audio & Mentorship →</button>
+      </div>
+    </div>
+
+    <!-- ==================== SECTION 6: AUDIO & MENTORSHIP ==================== -->
+    <div class="section-card" id="sec-6">
+      <div class="section-header">
+        <h2>Section 6: Audio Discrimination & Clinical Mentorship</h2>
+        <p>Listen to authentic clinical dialogues, safety dilemmas, and phonetic pronunciation drills. Click <strong>Play Audio</strong> to listen at normal or measured pace.</p>
+      </div>
+
+      <!-- Q26 -->
+      <div class="q-item" id="q-26">
+        <div class="q-title"><span class="q-num">26.</span> <span>Audio Case 1: Trainee Safety Dilemma (Cervical Red Flags)</span></div>
+        
+        <div class="audio-player-card" id="player-26">
+          <button class="btn-play-audio" onclick="playAudioPrompt(26, 'Doctor, our patient in treatment room 2 has acute cervical restriction and suboccipital stiffness. I palpated a hard end-feel at C2-C3, but when I brought her neck into extension and rotation, she mentioned feeling slightly dizzy and nauseous. Can I go ahead with an HVLA thrust to unlock the joint?')">
+            <span>▶ Play Trainee Audio</span>
+          </button>
+          <div class="audio-wave"><span></span><span></span><span></span><span></span></div>
+          <button class="audio-speed-btn active" id="spd-26-1" onclick="setSpeed(26, 1.0)">1.0x Normal</button>
+          <button class="audio-speed-btn" id="spd-26-08" onclick="setSpeed(26, 0.8)">0.8x Slower</button>
+        </div>
+        <div class="hidden-transcript" id="tr-26">
+          <strong>Audio Transcript:</strong> "Doctor, our patient in treatment room 2 has acute cervical restriction and suboccipital stiffness. I palpated a hard end-feel at C2-C3, but when I brought her neck into extension and rotation, she mentioned feeling slightly dizzy and nauseous. Can I go ahead with an HVLA thrust to unlock the joint?"
+        </div>
+
+        <div class="q-prompt">As the Senior Clinical Educator, what is your immediate instructional directive to the intern?</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-26" value="A" onchange="checkAnswer(26)"> <span>"Immediately halt the procedure. Dizziness and nausea on extension are red flags for cervical artery dysfunction; we must conduct full neurovascular screening."</span></label>
+          <label class="opt-label"><input type="radio" name="opt-26" value="B" onchange="checkAnswer(26)"> <span>"Proceed with the thrust, but ask for a submaximal isometric contraction first."</span></label>
+          <label class="opt-label"><input type="radio" name="opt-26" value="C" onchange="checkAnswer(26)"> <span>"Advance past the anatomical barrier slowly to see if the dizziness subsides."</span></label>
+          <label class="opt-label"><input type="radio" name="opt-26" value="D" onchange="checkAnswer(26)"> <span>"Apply deep sustained myofascial pressure to the carotid artery."</span></label>
+        </div>
+        <div class="q-feedback" id="fb-26"></div>
+      </div>
+
+      <!-- Q27 -->
+      <div class="q-item" id="q-27">
+        <div class="q-title"><span class="q-num">27.</span> <span>Audio Case 2: The Patient's Voice (Register Translation)</span></div>
+        
+        <div class="audio-player-card" id="player-27">
+          <button class="btn-play-audio" onclick="playAudioPrompt(27, 'Every afternoon sitting at my desk, my neck completely seizes up. It feels like a tight band around the base of my skull, and gentle stretching at my desk just does not seem to touch it.')">
+            <span>▶ Play Patient Audio</span>
+          </button>
+          <div class="audio-wave"><span></span><span></span><span></span><span></span></div>
+          <button class="audio-speed-btn active" id="spd-27-1" onclick="setSpeed(27, 1.0)">1.0x Normal</button>
+          <button class="audio-speed-btn" id="spd-27-08" onclick="setSpeed(27, 0.8)">0.8x Slower</button>
+        </div>
+        <div class="hidden-transcript" id="tr-27">
+          <strong>Audio Transcript:</strong> "Every afternoon sitting at my desk, my neck completely seizes up. It feels like a tight band around the base of my skull, and gentle stretching at my desk just doesn't seem to touch it."
+        </div>
+
+        <div class="q-prompt">Translate the patient's colloquial symptoms into formal medical terminology for your clinical case record:</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-27" value="A" onchange="checkAnswer(27)"> <span>Patient reports chronic postural cervico-cranial hypertonicity unresponsive to passive stretching, consistent with suboccipital somatic dysfunction.</span></label>
+          <label class="opt-label"><input type="radio" name="opt-27" value="B" onchange="checkAnswer(27)"> <span>Patient presents with acute ligamentous tearing of the upper cervical spine requiring surgical stabilisation.</span></label>
+          <label class="opt-label"><input type="radio" name="opt-27" value="C" onchange="checkAnswer(27)"> <span>Patient exhibits complete permanent ankylosis of the occipito-atlantal joint.</span></label>
+          <label class="opt-label"><input type="radio" name="opt-27" value="D" onchange="checkAnswer(27)"> <span>Patient suffers from psychogenic headache with normal biomechanical findings.</span></label>
+        </div>
+        <div class="q-feedback" id="fb-27"></div>
+      </div>
+
+      <!-- Q28 -->
+      <div class="q-item" id="q-28">
+        <div class="q-title"><span class="q-num">28.</span> <span>Audio Case 3: Phonetic Syllable Stress Ear (DIAGNOSTIC)</span></div>
+        
+        <div class="audio-player-card" id="player-28">
+          <button class="btn-play-audio" onclick="playAudioPrompt(28, 'Diagnostic. The diagnostic findings confirmed paraspinal hypertonicity.')">
+            <span>▶ Play Pronunciation Audio</span>
+          </button>
+          <div class="audio-wave"><span></span><span></span><span></span><span></span></div>
+          <button class="audio-speed-btn active" id="spd-28-1" onclick="setSpeed(28, 1.0)">1.0x Normal</button>
+          <button class="audio-speed-btn" id="spd-28-08" onclick="setSpeed(28, 0.8)">0.8x Slower</button>
+        </div>
+        <div class="hidden-transcript" id="tr-28">
+          <strong>Audio Transcript:</strong> "Diagnostic. The diagnostic findings confirmed paraspinal hypertonicity."
+        </div>
+
+        <div class="q-prompt">Which syllable receives the primary stress in standard UK/Australian clinical English for the word DIAGNOSTIC?</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-28" value="A" onchange="checkAnswer(28)"> <span>Third syllable: dy-uhg-NOSS-tik (/ˌdaɪ.əɡˈnɒs.tɪk/)</span></label>
+          <label class="opt-label"><input type="radio" name="opt-28" value="B" onchange="checkAnswer(28)"> <span>Second syllable: dy-AG-nuhs-tik (/daɪˈæɡ.nɒs.tɪk/)</span></label>
+          <label class="opt-label"><input type="radio" name="opt-28" value="C" onchange="checkAnswer(28)"> <span>First syllable: DY-uhg-noh-stik</span></label>
+          <label class="opt-label"><input type="radio" name="opt-28" value="D" onchange="checkAnswer(28)"> <span>Fourth syllable: dy-uhg-noss-TIK</span></label>
+        </div>
+        <div class="q-feedback" id="fb-28"></div>
+      </div>
+
+      <!-- Q29 -->
+      <div class="q-item" id="q-29">
+        <div class="q-title"><span class="q-num">29.</span> <span>Audio Case 4: The Italian Vowel Trap (MUSCLE)</span></div>
+        
+        <div class="audio-player-card" id="player-29">
+          <button class="btn-play-audio" onclick="playAudioPrompt(29, 'Muscle. Suboccipital muscle hypertonicity.')">
+            <span>▶ Play Pronunciation Audio</span>
+          </button>
+          <div class="audio-wave"><span></span><span></span><span></span><span></span></div>
+          <button class="audio-speed-btn active" id="spd-29-1" onclick="setSpeed(29, 1.0)">1.0x Normal</button>
+          <button class="audio-speed-btn" id="spd-29-08" onclick="setSpeed(29, 0.8)">0.8x Slower</button>
+        </div>
+        <div class="hidden-transcript" id="tr-29">
+          <strong>Audio Transcript:</strong> "Muscle. Suboccipital muscle hypertonicity."
+        </div>
+
+        <div class="q-prompt">In standard clinical English pronunciation of the word MUSCLE, what is the correct phonetic vowel and consonant pattern?</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-29" value="A" onchange="checkAnswer(29)"> <span>Silent 'c' with a short open central vowel: /ˈmʌs.əl/ (MASS-uhl / MUSS-uhl)</span></label>
+          <label class="opt-label"><input type="radio" name="opt-29" value="B" onchange="checkAnswer(29)"> <span>Hard 'c' with a long vowel: /ˈmʌs.kəl/ (MUSS-kuhl)</span></label>
+          <label class="opt-label"><input type="radio" name="opt-29" value="C" onchange="checkAnswer(29)"> <span>Closed Italian back vowel: /ˈmuːs.əl/ (MOOSS-uhl)</span></label>
+          <label class="opt-label"><input type="radio" name="opt-29" value="D" onchange="checkAnswer(29)"> <span>Voiced final consonant: /ˈmʌs.əl.zə/</span></label>
+        </div>
+        <div class="q-feedback" id="fb-29"></div>
+      </div>
+
+      <!-- Q30 -->
+      <div class="q-item" id="q-30">
+        <div class="q-title"><span class="q-num">30.</span> <span>Audio Case 5: Mentorship Cueing for MET Execution</span></div>
+        
+        <div class="audio-player-card" id="player-30">
+          <button class="btn-play-audio" onclick="playAudioPrompt(30, 'Doctor, the patient is positioned at the restrictive barrier. What exact verbal dosage and instruction should I give to initiate Muscle Energy Technique?')">
+            <span>▶ Play Intern Prompt</span>
+          </button>
+          <div class="audio-wave"><span></span><span></span><span></span><span></span></div>
+          <button class="audio-speed-btn active" id="spd-30-1" onclick="setSpeed(30, 1.0)">1.0x Normal</button>
+          <button class="audio-speed-btn" id="spd-30-08" onclick="setSpeed(30, 0.8)">0.8x Slower</button>
+        </div>
+        <div class="hidden-transcript" id="tr-30">
+          <strong>Audio Transcript:</strong> "Doctor, the patient is positioned at the restrictive barrier. What exact verbal dosage and instruction should I give to initiate Muscle Energy Technique?"
+        </div>
+
+        <div class="q-prompt">Which verbal cue demonstrates the correct C1 clinical mentoring instruction for Muscle Energy Technique?</div>
+        <div class="opt-list">
+          <label class="opt-label"><input type="radio" name="opt-30" value="A" onchange="checkAnswer(30)"> <span>"Ask the patient for a gentle, submaximal 15% isometric contraction against your counter-resistance, hold for 7 seconds, and take up the slack on exhalation."</span></label>
+          <label class="opt-label"><input type="radio" name="opt-30" value="B" onchange="checkAnswer(30)"> <span>"Tell the patient to push with maximum 100% explosive force against your arm until the muscle tires out."</span></label>
+          <label class="opt-label"><input type="radio" name="opt-30" value="C" onchange="checkAnswer(30)"> <span>"Instruct the patient to remain completely passive while you rapidly thrust past the anatomical barrier."</span></label>
+          <label class="opt-label"><input type="radio" name="opt-30" value="D" onchange="checkAnswer(30)"> <span>"Ask the patient to stretch continuously for 3 minutes without contracting."</span></label>
+        </div>
+        <div class="q-feedback" id="fb-30"></div>
+      </div>
+
+      <div class="actions-strip">
+        <button class="btn-secondary" onclick="switchSection(5)">← Back to Section 5</button>
+        <button class="btn-gold" onclick="finishExam()">Complete Exam & Evaluate Certification →</button>
+      </div>
+    </div>
+
+    <!-- ==================== RESULTS & CERTIFICATE VIEW ==================== -->
+    <div id="results-view">
+      <div class="results-hero">
+        <div class="score-circle">
+          <div class="pct" id="res-score-pct">0%</div>
+          <div class="pts" id="res-score-pts">0 / 30 PTS</div>
+        </div>
+
+        <div id="res-status-badge" class="status-badge">EVALUATING</div>
+        <h2 id="res-headline" style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--navy-900);">Exam Evaluation</h2>
+        <p id="res-subtext" style="color: var(--slate-600); max-width: 600px; margin: 0 auto 1.5rem; font-size: 0.95rem;">Review your performance below.</p>
+
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <button class="btn-gold" id="btn-cert-download" onclick="printCertificate()" style="display: none;">
+            <span>📄 Print / Save Certificate as PDF</span>
+          </button>
+          <button class="btn-secondary" id="btn-cert-image" onclick="exportCertificateImage()" style="display: none;">
+            <span>🖼️ Download High-Res Certificate Image</span>
+          </button>
+          <button class="btn-secondary" onclick="retryExam()">↺ Retake Assessment</button>
+        </div>
+      </div>
+
+      <!-- THE OFFICIAL PRINTABLE / EXPORTABLE CERTIFICATE -->
+      <div class="cert-wrapper" id="certificate-container" style="display: none;">
+        <div class="certificate" id="cert-canvas-target">
+          <div class="cert-corner-decor cert-tl"></div>
+          <div class="cert-corner-decor cert-tr"></div>
+          <div class="cert-corner-decor cert-bl"></div>
+          <div class="cert-corner-decor cert-br"></div>
+
+          <!-- Pegasus One Crest -->
+          <svg class="cert-logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="30" fill="#102A43" stroke="#D97706" stroke-width="2.5"/>
+            <path d="M18 42C24 40 28 34 32 26C34 22 38 18 44 16C41 22 38 28 37 34C36 40 40 44 46 44C38 46 30 45 24 43" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 28C26 26 30 24 35 25" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="32" cy="32" r="28" stroke="white" stroke-opacity="0.15" stroke-dasharray="3 3"/>
+          </svg>
+
+          <div class="cert-institution">Pegasus One • Language Learning Centre</div>
+          <div class="cert-title">Certificate of Clinical Competence</div>
+          <div class="cert-certifies">This is to officially certify that</div>
+          <div class="cert-recipient" id="cert-recipient-name">Dr Alex Taylor, D.O.</div>
+
+          <div class="cert-text">
+            has successfully satisfied all rigorous academic, clinical, and phonological criteria of the <strong>Advanced English for Clinical Practice: Osteopathy & Manual Therapeutics</strong> curriculum, demonstrating assessed C1-level professional communicative competence across Somatic Diagnostics (TART), Biomechanical Mechanics, Neurophysiological Reflex Reasoning, and Senior Clinical Mentorship.
+          </div>
+
+          <div class="cert-badges-grid">
+            <div class="cert-sig-block">
+              <div class="cert-signature-line">Nives Torresi</div>
+              <div class="cert-sig-title">Mrs Nives Torresi</div>
+              <div style="font-size: 0.7rem; color: var(--slate-500);">Lead Instructor • Cambridge TKT</div>
+            </div>
+
+            <div class="cert-seal-wrap">
+              <div class="cert-gold-seal">
+                <span class="seal-star">★ ★ ★</span>
+                <span class="seal-txt">PEGASUS ONE<br>CERTIFIED C1</span>
+                <span class="seal-year" id="cert-date-year">2026</span>
+              </div>
+            </div>
+
+            <div class="cert-sig-block">
+              <div style="font-size: 0.95rem; font-weight: 700; color: var(--navy-900); margin-bottom: 0.4rem;" id="cert-issue-date">October 2026</div>
+              <div class="cert-sig-title">Date of Conferral</div>
+              <div style="font-size: 0.7rem; color: var(--slate-500);" id="cert-credential-id">ID: PEG-C1-84920</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 <strong>Pegasus One Language Learning Centre</strong> • Clinical English for Healthcare Professionals. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Assessment Engine JavaScript -->
+  <script>
+    // Master Answer Key
+    const ANSWER_KEY = {
+      1: { type: 'text', val: ['compliance'], exp: "Root 'COMPLY' -> noun 'compliance' (neuromuscular compliance)." },
+      2: { type: 'text', val: ['restrictive'], exp: "Root 'RESTRICT' -> adjective 'restrictive' (restrictive barrier)." },
+      3: { type: 'text', val: ['tolerated'], exp: "Root 'TOLERATE' -> passive past participle 'tolerated' (poorly tolerated)." },
+      4: { type: 'text', val: ['facilitation'], exp: "Root 'FACILITATE' -> noun 'facilitation' (segmental facilitation)." },
+      5: { type: 'text', val: ['deformation'], exp: "Root 'DEFORM' -> noun 'deformation' (plastic deformation)." },
+      6: { type: 'choice', val: 'A', exp: "Use 'to + base verb' (to restore) to express the clinical purpose of an action." },
+      7: { type: 'choice', val: 'B', exp: "Use 'for + noun' (for diagnostic purposes) to express categorical function." },
+      8: { type: 'choice', val: 'B', exp: "Purpose clause: 'to engage' (never Italian calque 'for engage')." },
+      9: { type: 'choice', val: 'B', exp: "Adjective + infinitive: 'insufficient to remodel'." },
+      10: { type: 'choice', val: 'A', exp: "General function of a tool: 'designed for measuring' (or 'designed to measure')." },
+      11: { type: 'choice', val: 'A', exp: "'Rule out' means to exclude or eliminate a differential diagnosis or red flag." },
+      12: { type: 'choice', val: 'A', exp: "'Stem from' means to originate from or be caused by an underlying dysfunction." },
+      13: { type: 'choice', val: 'A', exp: "'Flare up' means an acute exacerbation or recurrence of symptoms." },
+      14: { type: 'choice', val: 'A', exp: "'Take up the slack' is the standard clinical idiom for advancing to the new restrictive barrier." },
+      15: { type: 'choice', val: 'A', exp: "'Carry out' means to perform or execute an examination or procedure." },
+      16: { type: 'choice', val: 'A', exp: "In the TART diagnostic criteria, 'R' stands for Restriction of motion." },
+      17: { type: 'choice', val: 'A', exp: "'Boggy' denotes the spongy, fluid-congested texture of acute vascular congestion." },
+      18: { type: 'choice', val: 'A', exp: "Chronic paraspinal dysfunction manifests as cool, dense, fibrotic tissue." },
+      19: { type: 'choice', val: 'A', exp: "The anatomical barrier is the absolute passive limit governed by ligaments and bones." },
+      20: { type: 'choice', val: 'A', exp: "A functional limitation within normal range of motion is a restrictive (pathological) barrier." },
+      21: { type: 'choice', val: 'A', exp: "High register: 'to restore articular compliance without joint trauma' replaces colloquial 'crack the joint'." },
+      22: { type: 'choice', val: 'A', exp: "Institutional register: 'to engage or challenge the restrictive barrier' replaces 'push the barrier'." },
+      23: { type: 'choice', val: 'A', exp: "Medical register: 'to induce neuromuscular compliance and reduce hypertonicity' replaces 'relax the tight muscle'." },
+      24: { type: 'choice', val: 'A', exp: "Neurophysiological register: 'to down-regulate and recalibrate central nervous system processing' replaces 'restart the nervous system'." },
+      25: { type: 'choice', val: 'A', exp: "In English, the comparative form of fast is 'faster' (never 'more fast')." },
+      26: { type: 'choice', val: 'A', exp: "Clinical safety priority: Dizziness/nausea on extension are CAD red flags requiring immediate cessation." },
+      27: { type: 'choice', val: 'A', exp: "Formal clinical translation: Translates colloquial 'seizes up / tight band' into postural cervico-cranial hypertonicity." },
+      28: { type: 'choice', val: 'A', exp: "Phonetic accuracy: Primary stress in 'diagnostic' is on the 3rd syllable: dy-uhg-NOSS-tik (/ˌdaɪ.əɡˈnɒs.tɪk/)." },
+      29: { type: 'choice', val: 'A', exp: "Phonetic accuracy: 'Muscle' has a silent 'c' and short open vowel /ʌ/ (MASS-uhl / MUSS-uhl), not Italian /u/." },
+      30: { type: 'choice', val: 'A', exp: "Mentorship instruction: MET mandates a submaximal (15%) contraction followed by slack uptake on exhalation." }
+    };
+
+    let userAnswers = {};
+    let candidateName = "Dr Alex Taylor, D.O.";
+    let candidateEmail = "clinician@example.com";
+    let speechRate = 1.0;
+
+    function saveCandidateProfile() {
+      const nameInput = document.getElementById('input-fullname').value.trim();
+      const emailInput = document.getElementById('input-email').value.trim();
+      if (nameInput) {
+        candidateName = nameInput;
+        document.getElementById('display-candidate-name').textContent = candidateName;
+        document.getElementById('cert-recipient-name').textContent = candidateName;
+      }
+      if (emailInput) {
+        candidateEmail = emailInput;
+      }
+      alert('Candidate record updated: ' + candidateName);
+    }
+
+    function switchSection(secId) {
+      document.querySelectorAll('.section-card').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      
+      const targetCard = document.getElementById('sec-' + secId);
+      if (targetCard) targetCard.classList.add('active');
+      
+      const buttons = document.querySelectorAll('.tab-btn');
+      if (buttons[secId - 1]) buttons[secId - 1].classList.add('active');
+
+      window.scrollTo({ top: 180, behavior: 'smooth' });
+    }
+
+    function checkAnswer(qNum) {
+      const qConfig = ANSWER_KEY[qNum];
+      const fbBox = document.getElementById('fb-' + qNum);
+      let userVal = '';
+
+      if (qConfig.type === 'text') {
+        const inputElem = document.getElementById('ans-' + qNum);
+        userVal = inputElem.value.trim().toLowerCase();
+        if (!userVal) return;
+        userAnswers[qNum] = userVal;
+        
+        const isCorrect = qConfig.val.includes(userVal);
+        if (isCorrect) {
+          fbBox.className = 'q-feedback correct';
+          fbBox.innerHTML = '<strong>✓ Correct!</strong> ' + qConfig.exp;
+        } else {
+          fbBox.className = 'q-feedback incorrect';
+          fbBox.innerHTML = '<strong>✗ Incorrect.</strong> Expected: <em>' + qConfig.val[0] + '</em>. ' + qConfig.exp;
+        }
+      } else if (qConfig.type === 'choice') {
+        const radios = document.getElementsByName('opt-' + qNum);
+        for (let r of radios) {
+          if (r.checked) {
+            userVal = r.value;
+            break;
+          }
+        }
+        if (!userVal) return;
+        userAnswers[qNum] = userVal;
+
+        const isCorrect = (userVal === qConfig.val);
+        if (isCorrect) {
+          fbBox.className = 'q-feedback correct';
+          fbBox.innerHTML = '<strong>✓ Correct!</strong> ' + qConfig.exp;
+        } else {
+          fbBox.className = 'q-feedback incorrect';
+          fbBox.innerHTML = '<strong>✗ Incorrect.</strong> Correct answer: <strong>[' + qConfig.val + ']</strong>. ' + qConfig.exp;
+        }
+      }
+
+      // Show transcript if audio question
+      const trBox = document.getElementById('tr-' + qNum);
+      if (trBox) trBox.style.display = 'block';
+
+      updateMetrics();
+    }
+
+    function updateMetrics() {
+      const answeredCount = Object.keys(userAnswers).length;
+      document.getElementById('val-answered').textContent = answeredCount + ' / 30';
+      const pctAnswered = Math.round((answeredCount / 30) * 100);
+      document.getElementById('bar-progress').style.width = pctAnswered + '%';
+
+      // Update Tab Badges
+      for (let s = 1; s <= 6; s++) {
+        const startQ = (s - 1) * 5 + 1;
+        let count = 0;
+        for (let q = startQ; q < startQ + 5; q++) {
+          if (userAnswers[q] !== undefined) count++;
+        }
+        document.getElementById('badge-sec-' + s).textContent = count + '/5';
+      }
+
+      // Calculate score
+      let correct = 0;
+      for (let [qNum, val] of Object.entries(userAnswers)) {
+        const qConfig = ANSWER_KEY[qNum];
+        if (qConfig.type === 'text') {
+          if (qConfig.val.includes(val)) correct++;
+        } else {
+          if (val === qConfig.val) correct++;
+        }
+      }
+
+      const scorePct = Math.round((correct / 30) * 100);
+      document.getElementById('val-current-score').textContent = scorePct + '%';
+      document.getElementById('bar-score').style.width = scorePct + '%';
+
+      if (answeredCount === 30) {
+        if (scorePct >= 80) {
+          document.getElementById('val-status').textContent = 'CERTIFIED';
+          document.getElementById('val-status').style.color = 'var(--emerald-600)';
+        } else {
+          document.getElementById('val-status').textContent = 'RETRY NEEDED';
+          document.getElementById('val-status').style.color = 'var(--gold-600)';
+        }
+      }
+    }
+
+    // Speech Synthesis for Section 6
+    function setSpeed(qNum, rate) {
+      speechRate = rate;
+      document.getElementById('spd-' + qNum + '-1').classList.toggle('active', rate === 1.0);
+      document.getElementById('spd-' + qNum + '-08').classList.toggle('active', rate === 0.8);
+    }
+
+    function playAudioPrompt(qNum, textToSpeak) {
+      if (!('speechSynthesis' in window)) {
+        alert('Web Speech API is not supported in this browser. Please view the revealed transcript.');
+        document.getElementById('tr-' + qNum).style.display = 'block';
+        return;
+      }
+
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(textToSpeak);
+      utterance.rate = speechRate;
+      utterance.lang = 'en-GB';
+
+      const playerCard = document.getElementById('player-' + qNum);
+      playerCard.classList.add('speaking');
+
+      utterance.onend = function() {
+        playerCard.classList.remove('speaking');
+      };
+      utterance.onerror = function() {
+        playerCard.classList.remove('speaking');
+      };
+
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function finishExam() {
+      const answeredCount = Object.keys(userAnswers).length;
+      if (answeredCount < 30) {
+        const confirmEarly = confirm('You have completed ' + answeredCount + ' of 30 questions. Would you like to evaluate your current score now?');
+        if (!confirmEarly) return;
+      }
+
+      let correct = 0;
+      for (let [qNum, val] of Object.entries(userAnswers)) {
+        const qConfig = ANSWER_KEY[qNum];
+        if (qConfig.type === 'text') {
+          if (qConfig.val.includes(val)) correct++;
+        } else {
+          if (val === qConfig.val) correct++;
+        }
+      }
+
+      const scorePct = Math.round((correct / 30) * 100);
+
+      document.querySelectorAll('.section-card').forEach(c => c.style.display = 'none');
+      document.querySelector('.tab-nav').style.display = 'none';
+      document.getElementById('registration-card').style.display = 'none';
+
+      const resultsView = document.getElementById('results-view');
+      resultsView.style.display = 'block';
+
+      document.getElementById('res-score-pct').textContent = scorePct + '%';
+      document.getElementById('res-score-pts').textContent = correct + ' / 30 PTS';
+
+      const certWrapper = document.getElementById('certificate-container');
+      const badgeElem = document.getElementById('res-status-badge');
+      const btnDownload = document.getElementById('btn-cert-download');
+      const btnImage = document.getElementById('btn-cert-image');
+
+      if (scorePct >= 80) {
+        badgeElem.className = 'status-badge pass';
+        badgeElem.textContent = '★ PASS — C1 CERTIFICATION GRANTED ★';
+        document.getElementById('res-headline').textContent = 'Congratulations, ' + candidateName + '!';
+        document.getElementById('res-subtext').textContent = 'You have exceeded the rigorous 80% passing standard. Your official Pegasus One Certificate of Clinical Competence is conferred below.';
+        
+        certWrapper.style.display = 'block';
+        btnDownload.style.display = 'inline-block';
+        btnImage.style.display = 'inline-block';
+
+        // Update Certificate Date and Credential ID
+        const now = new Date();
+        const dateStr = now.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+        document.getElementById('cert-issue-date').textContent = dateStr;
+        document.getElementById('cert-date-year').textContent = now.getFullYear();
+        document.getElementById('cert-credential-id').textContent = 'ID: PEG-C1-' + Math.floor(10000 + Math.random() * 90000);
+      } else {
+        badgeElem.className = 'status-badge retry';
+        badgeElem.textContent = 'NEEDS REVIEW — 80% REQUIRED';
+        document.getElementById('res-headline').textContent = 'Assessment Incomplete, ' + candidateName;
+        document.getElementById('res-subtext').textContent = 'You achieved ' + scorePct + '% (requires 80% to confer certification). Review the explanations in the feedback banners and click Retake to master the curriculum.';
+        
+        certWrapper.style.display = 'none';
+        btnDownload.style.display = 'none';
+        btnImage.style.display = 'none';
+      }
+
+      window.scrollTo({ top: 100, behavior: 'smooth' });
+    }
+
+    function retryExam() {
+      document.getElementById('results-view').style.display = 'none';
+      document.querySelector('.tab-nav').style.display = 'flex';
+      document.getElementById('registration-card').style.display = 'block';
+      document.querySelectorAll('.section-card').forEach(c => c.style.display = 'none');
+      switchSection(1);
+    }
+
+    function printCertificate() {
+      window.print();
+    }
+
+    // High-Resolution Certificate Image Export via HTML5 Canvas
+    function exportCertificateImage() {
+      const canvas = document.createElement('canvas');
+      canvas.width = 1600;
+      canvas.height = 1130;
+      const ctx = canvas.getContext('2d');
+
+      // Background
+      ctx.fillStyle = '#fffdfa';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Navy Outer Border
+      ctx.strokeStyle = '#0a192f';
+      ctx.lineWidth = 14;
+      ctx.strokeRect(30, 30, canvas.width - 60, canvas.height - 60);
+
+      // Gold Inner Border
+      ctx.strokeStyle = '#d97706';
+      ctx.lineWidth = 4;
+      ctx.strokeRect(50, 50, canvas.width - 100, canvas.height - 100);
+
+      // Header Text
+      ctx.fillStyle = '#b45309';
+      ctx.font = 'bold 26px Georgia, serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('PEGASUS ONE • LANGUAGE LEARNING CENTRE', canvas.width / 2, 140);
+
+      ctx.fillStyle = '#0a192f';
+      ctx.font = 'bold 50px Georgia, serif';
+      ctx.fillText('Certificate of Clinical Competence', canvas.width / 2, 220);
+
+      ctx.fillStyle = '#475569';
+      ctx.font = 'italic 24px Georgia, serif';
+      ctx.fillText('This is to officially certify that', canvas.width / 2, 280);
+
+      // Recipient Name
+      ctx.fillStyle = '#102a43';
+      ctx.font = 'bold 54px Georgia, serif';
+      ctx.fillText(candidateName, canvas.width / 2, 380);
+
+      // Gold underline
+      ctx.strokeStyle = '#d97706';
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.moveTo(canvas.width / 2 - 280, 410);
+      ctx.lineTo(canvas.width / 2 + 280, 410);
+      ctx.stroke();
+
+      // Certificate Body Text
+      ctx.fillStyle = '#334155';
+      ctx.font = '22px Georgia, serif';
+      const lines = [
+        'has successfully satisfied all rigorous academic, clinical, and phonological criteria of the',
+        'Advanced English for Clinical Practice: Osteopathy & Manual Therapeutics curriculum,',
+        'demonstrating assessed C1-level professional communicative competence across Somatic Diagnostics',
+        '(TART), Biomechanical Mechanics, Neurophysiological Reflex Reasoning, and Senior Clinical Mentorship.'
+      ];
+      let y = 470;
+      for (let l of lines) {
+        ctx.fillText(l, canvas.width / 2, y);
+        y += 38;
+      }
+
+      // Gold Seal (Center)
+      const sealX = canvas.width / 2;
+      const sealY = 820;
+      const grad = ctx.createRadialGradient(sealX, sealY, 10, sealX, sealY, 70);
+      grad.addColorStop(0, '#fde047');
+      grad.addColorStop(0.7, '#d97706');
+      grad.addColorStop(1, '#92400e');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(sealX, sealY, 65, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 3;
+      ctx.setLineDash([6, 4]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      ctx.fillStyle = '#451a03';
+      ctx.font = 'bold 16px sans-serif';
+      ctx.fillText('PEGASUS ONE', sealX, sealY - 14);
+      ctx.fillText('CERTIFIED C1', sealX, sealY + 6);
+      ctx.font = 'bold 18px sans-serif';
+      ctx.fillText('★ ★ ★', sealX, sealY + 28);
+
+      // Instructor Signature (Left)
+      ctx.fillStyle = '#0a192f';
+      ctx.font = 'italic bold 36px Georgia, cursive';
+      ctx.fillText('Nives Torresi', 320, 800);
+      ctx.strokeStyle = '#334155';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(220, 820);
+      ctx.lineTo(420, 820);
+      ctx.stroke();
+      ctx.fillStyle = '#64748b';
+      ctx.font = 'bold 16px sans-serif';
+      ctx.fillText('MRS NIVES TORRESI', 320, 845);
+      ctx.font = '14px sans-serif';
+      ctx.fillText('Lead Instructor • Cambridge TKT', 320, 870);
+
+      // Date of Conferral (Right)
+      const now = new Date();
+      const dateStr = now.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+      ctx.fillStyle = '#0a192f';
+      ctx.font = 'bold 24px Georgia, serif';
+      ctx.fillText(dateStr, canvas.width - 320, 800);
+      ctx.strokeStyle = '#334155';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(canvas.width - 420, 820);
+      ctx.lineTo(canvas.width - 220, 820);
+      ctx.stroke();
+      ctx.fillStyle = '#64748b';
+      ctx.font = 'bold 16px sans-serif';
+      ctx.fillText('DATE OF CONFERRAL', canvas.width - 320, 845);
+      ctx.font = '14px sans-serif';
+      ctx.fillText('ID: ' + document.getElementById('cert-credential-id').textContent, canvas.width - 320, 870);
+
+      // Export as PNG
+      const link = document.createElement('a');
+      link.download = 'Pegasus_One_C1_Certificate_' + candidateName.replace(/[^a-zA-Z0-9]/g, '_') + '.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+  </script>
+</body>
+</html>
